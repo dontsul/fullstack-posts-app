@@ -21,6 +21,7 @@
     "mongoose": "^7.0.3"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
     "nodemon": "^2.0.22"
   }
 }
