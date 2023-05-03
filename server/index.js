@@ -1,24 +1,13 @@
 // index.js входной файл всего сервера
-require = require('esm')(module);
-module.exports = require('./server/index.js');
 
-// import express from 'express';
-// import mongoose from 'mongoose';
-// import dotenv from 'dotenv';
-// import cors from 'cors';
-// import authRoute from './routes/auth.js';
-// import postRoute from './routes/posts.js';
-// import commentRoute from './routes/comments.js';
-// import fileUpload from 'express-fileupload';
-
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const authRoute = require('./routes/auth.js');
-const postRoute = require('./routes/posts.js');
-const commentRoute = require('./routes/comments.js');
-const fileUpload = require('express-fileupload');
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import authRoute from './routes/auth.js';
+import postRoute from './routes/posts.js';
+import commentRoute from './routes/comments.js';
+import fileUpload from 'express-fileupload';
 
 const app = express(); //создание приложение в фреймворке express
 dotenv.config();
