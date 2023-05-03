@@ -61,11 +61,9 @@ export const EditPostPage = () => {
       </label>
       <div className="flex object-cover py-2">
         {oldImage && (
-          <img src={`http://localhost:3002/${oldImage}`} alt={oldImage.name} />
+          <img src={`https://fullstack-posts-app.vercel.app/${oldImage}`} alt={oldImage.name} />
         )}
-        {newImage && (
-          <img src={URL.createObjectURL(newImage)} alt={newImage.name} />
-        )}
+        {newImage && <img src={URL.createObjectURL(newImage)} alt={newImage.name} />}
       </div>
       <label className="text-xs text-white opacity-70">
         Заголовок поста:

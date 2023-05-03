@@ -1,20 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  AiFillEye,
-  AiOutlineMessage,
-  AiTwotoneEdit,
-  AiFillDelete,
-} from 'react-icons/ai';
+import { AiFillEye, AiOutlineMessage, AiTwotoneEdit, AiFillDelete } from 'react-icons/ai';
 import Moment from 'react-moment';
 import axios from '../utils/axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { removePost } from '../redux/features/post/postSlice';
 import { toast } from 'react-toastify';
-import {
-  createComment,
-  getPostComments,
-} from '../redux/features/comments/commentSlice';
+import { createComment, getPostComments } from '../redux/features/comments/commentSlice';
 import { CommentItem } from '../components/CommentItem';
 import { Loader } from '../components/Loader';
 
@@ -86,23 +78,17 @@ export const PostPage = () => {
       <div className="flex gap-10 py-8">
         <div className="w-2/3">
           <div className="flex flex-col basis-1/4 flex-grow">
-            <div
-              className={
-                post.imgUrl ? 'flex rounded-sm h-80' : 'flex rounded-sm'
-              }
-            >
+            <div className={post.imgUrl ? 'flex rounded-sm h-80' : 'flex rounded-sm'}>
               {post.imgUrl && (
                 <img
                   className="object-cover w-full rounded-md"
-                  src={`http://localhost:3002/${post.imgUrl}`}
+                  src={`https://fullstack-posts-app.vercel.app/${post.imgUrl}`}
                   alt={post.title}
                 />
               )}
             </div>
             <div className="flex justify-between items-center pt-2">
-              <div className="text-xs text-white opacity-10">
-                {post.username}
-              </div>
+              <div className="text-xs text-white opacity-10">{post.username}</div>
               <div className="text-xs text-white opacity-10">
                 {<Moment date={post.createdAt} format="D MMM YYYY" />}
               </div>
