@@ -14,13 +14,11 @@ export const PostItem = ({ post }) => {
   return (
     <Link to={`/${post._id}`}>
       <div className="flex flex-col flex-grow basis-1/4">
-        <div
-          className={post.imgUrl ? 'flex rounded-sm h-80' : 'flex rounded-sm'}
-        >
+        <div className={post.imgUrl ? 'flex rounded-sm h-80' : 'flex rounded-sm'}>
           {post.imgUrl && (
             <img
               className="object-cover w-full rounded-md"
-              src={`https://fullstack-posts-app.vercel.app/${post.imgUrl}`}
+              src={`http://localhost:3002/${post.imgUrl}`}
               alt={post.title}
             />
           )}
@@ -32,9 +30,7 @@ export const PostItem = ({ post }) => {
           </div>
         </div>
         <div className="text-white text-xl">{post.title}</div>
-        <p className="text-white opacity-60 text-xs pt-4 line-clamp-4">
-          {post.text}
-        </p>
+        <p className="text-white opacity-60 text-xs pt-4 line-clamp-4">{post.text}</p>
         <div className="flex items-center gap-3 mt-2">
           <button className="flex justify-center items-center gap-2 text-white opacity-50">
             <AiFillEye />

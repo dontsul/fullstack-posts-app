@@ -82,7 +82,7 @@ export const PostPage = () => {
               {post.imgUrl && (
                 <img
                   className="object-cover w-full rounded-md"
-                  src={`https://fullstack-posts-app.vercel.app/${post.imgUrl}`}
+                  src={`http://localhost:3002/${post.imgUrl}`}
                   alt={post.title}
                 />
               )}
