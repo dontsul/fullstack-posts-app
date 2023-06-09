@@ -9,7 +9,7 @@ import postRoute from './routes/posts.js';
 import commentRoute from './routes/comments.js';
 import fileUpload from 'express-fileupload';
 
-const app = express(); //создание приложение в фреймворке express
+export const app = express(); //создание приложение в фреймворке express
 dotenv.config();
 
 //constants
