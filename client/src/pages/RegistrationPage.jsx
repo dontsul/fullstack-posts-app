@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  registrationUser,
-  checkIsAuth,
-} from '../redux/features/auth/authSlice';
+import { registrationUser, checkIsAuth } from '../redux/features/auth/authSlice';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -37,10 +34,7 @@ export const RegistrationPage = () => {
   }, [status, isAuth, navigate]);
 
   return (
-    <form
-      className="w-1/4 h-6 mx-auto mt-40"
-      onSubmit={(e) => e.preventDefault()}
-    >
+    <form className="w-1/4 h-6 mx-auto mt-40" onSubmit={(e) => e.preventDefault()}>
       <h1 className="text-white text-lg text-center">Регистрация</h1>
       <label className="text-xs text-gray-400" htmlFor="">
         Логин:
@@ -72,10 +66,7 @@ export const RegistrationPage = () => {
         >
           Зарегистрироваться{' '}
         </button>
-        <Link
-          to="/login"
-          className="flex justify-center items-center text-xs text-white"
-        >
+        <Link to="/login" className="flex justify-center items-center text-xs text-white">
           Есть аккаунт?
         </Link>
       </div>
