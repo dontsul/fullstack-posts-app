@@ -30,6 +30,10 @@ app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/comments', commentRoute);
 
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
+
 async function start() {
   try {
     await mongoose.connect(
